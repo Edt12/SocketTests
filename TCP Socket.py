@@ -1,5 +1,7 @@
 import socket
-Host='192.168.179.136'#change to get host name when outside vm 
+hostipaddress=socket.gethostname()
+print(hostipaddress)
+Host=socket.gethostbyname(hostipaddress)#change to get host name when outside vm 
 PORT=9090
 server=socket.socket(socket.AF_INET, socket.SOCK_STREAM)#Defines type of socket AF_INET =internet socket,SOCK_STREAM=TCP protocol#just for accepting connections not to be used to send
 
