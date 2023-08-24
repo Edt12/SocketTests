@@ -4,7 +4,7 @@ server=socket.socket(socket.AF_INET, socket.SOCK_STREAM)#Defines type of socket 
 Host=socket.getaddrinfo(socket.gethostname(),9090)
 print(Host)
 
-server.bind(('',9090))
+server.bind(('10.0.1.10',9090))
 server.listen(5)#if more than 5 connections waiting then reject
 #ONLY USE COMMUNICATION SOCKET TO TALK TO CLIENT SERVER IS ONLY FOR ACCEPTING CONNECTIONS
 

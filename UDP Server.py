@@ -2,11 +2,11 @@ import socket
 
 
 
-hostipaddress=socket.gethostname()
+
 server=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-server.bind((hostipaddress,9999))
-server.bind()
+server.bind(('10.0.1.10',9999))
+
 
 #dont listen for connections as udp is connectionless protocol
 message,address=server.recvfrom(1024)
